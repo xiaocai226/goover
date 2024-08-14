@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+    .box {
+      width: 300px;
+      margin: 0 auto;
+      /* overflow: hidden; */
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      width: 148px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .box>li {
+      float: left;
+      background-color: blue;
+      border: 1px solid rgb(211, 211, 24);
+      color: aliceblue;
+      position: relative;
+    }
+    .item:hover {
+      background-color: rgb(132, 132, 219);
+    }
+    .item ul {
+      display: none;
+      background-color: rgb(224, 220, 213);
+      color: rgb(194, 154, 231);
+      position: absolute;
+      top: 50px;
+      left: 0;
+    }
+    .item:hover ul {
+      display: block;
+    }
+    .content {
+      height: 40px;
+      background-color: aquamarine;
+    }
+    .box::after {
+      /* 这个伪元素是行内元素 */
+      /* 因此得 伪元素 + 清除浮动 + 转块级元素 */
+      content: '';
+      clear: both;
+      display: block;
+      /* 以下代码只是为了保证不显示该伪元素 */
+      width: 0;
+      height: 0;
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+  <ul class="box">
+    <li class="item">视频教程
+      <ul>
+        <li>全部</li>
+        <li>JAVA</li>
+        <li>Python</li>
+        <li>前端</li>
+        <li>html5</li>
+      </ul>
+    </li>
+    <li class="item">文档教程
+      <ul>
+        <li>全部</li>
+        <li>前端</li>
+        <li>html5</li>
+      </ul>
+    </li>
+  </ul>
+
+  <div class="content">111111111</div>
+</body>
+</html>

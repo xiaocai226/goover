@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,body {
+      height: 100%;
+    }
+    .left,.right {
+      width: 200px;
+      height: 100%;
+    }
+    .left {
+      background-color: yellowgreen;
+      float: left;
+    }
+    .right {
+      background-color: yellowgreen;
+      float: right;
+    }
+    .center {
+      height: 100%;
+      background-color: aquamarine;
+      /* 法一 */
+      /* margin: 0 200px; */
+      /* 法二 */
+      width: calc(100% - 400px);
+      float: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="left"></div>
+  <!-- 要把right调上来，是因为如果在后面，由于center是个块级元素，不允许后面再上来 -->
+  <div class="right"></div>
+  <div class="center"></div>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h3>单选框</h3>
+    你的性别？
+    <div>
+      <input type="radio" name="aaa" id="man" checked='checked'/>
+      <label for="man">男</label>
+    </div>
+    <div>
+      <input type="radio" name="aaa" id="woman"/>
+      <label for="woman">女</label>
+    </div>
+  </div>
+
+  <div>
+    <h3>复选框</h3>
+    你的爱好？
+    <div>
+      <input type="checkbox" name="bbb" id="cg"/>
+      <label for="cg">唱歌</label>
+      <input type="checkbox" name="bbb" id="tw" checked/>
+      <label for="tw">跳舞</label>
+      <input type="checkbox" name="bbb" id="hj" checked/>
+      <label for="hj">喝酒</label>
+      <input type="checkbox" name="bbb" id="tt"/>
+      <label for="tt">烫头</label>
+    </div>
+  </div>
+
+  <div>
+    <h3>文件上传</h3>
+    相关问题请截图上传!
+    <div>
+      <!-- 上传文件 -->
+      <input type="file">
+    </div>
+  </div>
+
+  <div>
+    <h3>下拉菜单</h3>
+    <div>
+      <div>你的收货地址</div>
+      <select size="2">
+        <option value="xm">厦门</option>
+        <option value="pt">莆田</option>
+        <option value="qz" selected>泉州</option>
+        <option value="zz">漳州</option>
+      </select>
+    </div>
+  </div>
+
+  <div>
+    <h3>多行文本输入框-文本域</h3>
+    <div>
+      <div>请输入地址</div>
+      <textarea cols="30" rows="10" placeholder="请输入你的意见">提前设置好的value</textarea>
+    </div>
+  </div>
+
+  <div>
+    <h3>字段集</h3>
+    <fieldset>
+      <legend>性别</legend>
+      <input type="radio" name="a">男
+      <input type="radio" name="a">女
+    </fieldset>
+  </div>
+
+  <div>
+    <h3>其他</h3>
+    图片按钮 - 代替提交按钮（input type='submit'）
+    <div>
+      <input type="image" src="图片地址">
+    </div>
+
+    隐藏按钮 - 单单用于带给后端的个人信息,普通用户看不到
+    <div>
+      <input type="hidden" value="带给后端的个人信息...">
+    </div>
+
+    禁用disabled 只读readonly
+    <div>
+      <button disabled>禁用</button>
+      <input type="radio" disabled>不爽
+
+      <input type="text" readonly value="1290"> 
+    </div>
+  </div>
+
+  
+</body>
+</html>
